@@ -4,20 +4,20 @@
 class Slice < Formula
   desc "Contents of a file using syntax similar to Python's notation"
   homepage "https://github.com/ChanTsune/slice"
-  version "0.2.0"
+  version "0.2.1"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     on_arm do
       url "https://github.com/ChanTsune/slice/releases/download/#{version}/slice-#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "d0a222cab1105a6a69309e5282b26137c7232479b9fdcda01b8cd9631fcf454a"
+      sha256 "83b84cd37e2e9ec2c502dcf3179373192e4ee34bcd01f4f826b312c63b83bb4e"
       def install
         bin.install "slice"
       end
     end
     on_intel do
       url "https://github.com/ChanTsune/slice/releases/download/#{version}/slice-#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "09c287e1b3cee12086ee2b9f260476545c261efbfa09ff5f70fa2b45f2c7f15e"
+      sha256 "2bea5cf9746169729f918782fda2969be8166aaa446a23ba3c854a63732d76da"
       def install
         bin.install "slice"
       end
@@ -27,14 +27,14 @@ class Slice < Formula
   on_linux do
     on_arm do
       url "https://github.com/ChanTsune/slice/releases/download/#{version}/slice-#{version}-arm-unknown-linux-gnueabihf.tar.gz"
-      sha256 "4b7c1b87295fb20a029321e2e7af758a7c269589990619aa6db9ac0c11c357e2"
+      sha256 "133d32a0b341a0fbea7698bc565a27cd75500a805cbb53e0c1aee5632d2e8830"
       def install
         bin.install "slice"
       end
     end
     on_intel do
       url "https://github.com/ChanTsune/slice/releases/download/#{version}/slice-#{version}-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "c6dc76f9a6d6fd1c8783056bf4cd2a58386a4dcb1889476866f114f8e5508f23"
+      sha256 "7cf8990d2a766b80ecf4c7b92a7ddb92cb5d74373943cb1e9a38983cf5e0919b"
       def install
         bin.install "slice"
       end
