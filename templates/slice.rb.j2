@@ -1,0 +1,48 @@
+# typed: false
+# frozen_string_literal: true
+
+class Slice < Formula
+  desc "Contents of a file using syntax similar to Python's notation"
+  homepage "https://github.com/ChanTsune/slice"
+  version "{{ version }}"
+  license any_of: ["Apache-2.0", "MIT"]
+
+  on_macos do
+    on_arm do
+      url "{{ macos_arm_url }}"
+      sha256 "{{ macos_arm_sha256 }}"
+      def install
+        bin.install "slice"
+      end
+    end
+    on_intel do
+      url "{{ macos_intel_url }}"
+      sha256 "{{ macos_intel_sha256 }}"
+      def install
+        bin.install "slice"
+      end
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "{{ linux_arm_url }}"
+      sha256 "{{ linux_arm_sha256 }}"
+      def install
+        bin.install "slice"
+      end
+    end
+    on_intel do
+      url "{{ linux_intel_url }}"
+      sha256 "{{ linux_intel_sha256 }}"
+      def install
+        bin.install "slice"
+      end
+    end
+  end
+
+  test do
+    # executables being tested: `system "#{bin}/slice", "do", "something"`.
+    system "false"
+  end
+end

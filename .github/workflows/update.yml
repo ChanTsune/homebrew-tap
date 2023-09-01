@@ -1,0 +1,32 @@
+name: Manual Workflow with update slice tap
+
+on:
+  workflow_dispatch:
+
+permissions:
+    contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install lastversion
+        run: pip install lastversion
+  
+      - name: Install minijinja-cli
+        run: cargo install minijinja-cli
+  
+      - name: Execute chuck and apply update of slice.rb
+        run: bash ./ci/update_slice.sh
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          git commit -m "Update slice "$(lastversion https://github.com/ChanTsune/slice)
+          git push
