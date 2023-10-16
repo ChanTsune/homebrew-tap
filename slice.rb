@@ -4,20 +4,20 @@
 class Slice < Formula
   desc "Contents of a file using syntax similar to Python's notation"
   homepage "https://github.com/ChanTsune/slice"
-  version "0.3.1"
+  version "0.4.0"
   license any_of: ["Apache-2.0", "MIT"]
 
   on_macos do
     on_arm do
-      url "https://github.com/ChanTsune/slice/releases/download/0.3.1/slice-0.3.1-aarch64-apple-darwin.tar.gz"
-      sha256 "e556aff9c6ca5fb3cb4d3106b3efa60012d5dbaf721046e6c9d73b75e036afe3"
+      url "https://github.com/ChanTsune/slice/releases/download/0.4.0/slice-0.4.0-aarch64-apple-darwin.tar.gz"
+      sha256 "85ed50537821489cd85bde00bd355f51abe4335b600c348c885c99ad1ebe22c9"
       def install
         bin.install "slice"
       end
     end
     on_intel do
-      url "https://github.com/ChanTsune/slice/releases/download/0.3.1/slice-0.3.1-x86_64-apple-darwin.tar.gz"
-      sha256 "d96391e264543093c6b1dccc82c85b08a8588ebd18495743a6f037f643b51b14"
+      url "https://github.com/ChanTsune/slice/releases/download/0.4.0/slice-0.4.0-x86_64-apple-darwin.tar.gz"
+      sha256 "2eeb69e85160e603355863d15da17fbb56bb21333126f260d1cd28475b34ece2"
       def install
         bin.install "slice"
       end
@@ -26,15 +26,15 @@ class Slice < Formula
 
   on_linux do
     on_arm do
-      url "https://github.com/ChanTsune/slice/releases/download/0.3.1/slice-0.3.1-arm-unknown-linux-gnueabihf.tar.gz"
-      sha256 "7d814c611a21ebd20ae5ba696be4e577e8fedf4667b79cc7ef9a81daec12222b"
+      url "https://github.com/ChanTsune/slice/releases/download/0.4.0/slice-0.4.0-arm-unknown-linux-gnueabihf.tar.gz"
+      sha256 "73694de03dba8f01e323696e62a8284fcbc3e2aadc3fdd948e75bbc71b8bf13c"
       def install
         bin.install "slice"
       end
     end
     on_intel do
-      url "https://github.com/ChanTsune/slice/releases/download/0.3.1/slice-0.3.1-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "8fcea3c1df790caee8b9945f28e675d8b60ac6e5573b85093cec65ed2adfe666"
+      url "https://github.com/ChanTsune/slice/releases/download/0.4.0/slice-0.4.0-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "f56e842350dc04ae805edff81782469c1ae1157329b4f934d4c521137e43b2ea"
       def install
         bin.install "slice"
       end
