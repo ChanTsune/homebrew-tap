@@ -18,7 +18,7 @@ jobs:
         run: pip install lastversion
   
       - name: Install minijinja-cli
-        run: cargo install minijinja-cli
+        run: curl -sSfL https://github.com/mitsuhiko/minijinja/releases/latest/download/minijinja-cli-installer.sh | sh
   
       - name: Execute chuck and apply update of slice.rb
         run: bash ./ci/update_slice.sh
